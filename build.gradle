@@ -1,0 +1,52 @@
+plugins {
+    id 'java'
+}
+
+group 'jarhead'
+version '1.4.4'
+
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.brott.dev/' }
+}
+
+dependencies {
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    implementation 'com.acmerobotics.roadrunner:core:0.5.5'
+    implementation 'com.formdev:flatlaf:2.5'
+}
+
+tasks.withType(Copy).all { duplicatesStrategy 'exclude' }
+
+jar {
+
+    sourceSets {
+        main {
+            resources {
+                srcDirs "src/main/resources"
+            }
+        }
+    }
+    manifest {
+        attributes(
+                "Main-Class" : "jarhead.Main"
+        )
+    }
+}
+
+task customFatJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': 'jarhead.Main'
+    }
+    baseName = 'RRPathGen'
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+test {
+    useJUnitPlatform()
+}
