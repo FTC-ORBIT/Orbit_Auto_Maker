@@ -1,4 +1,4 @@
-# RRPathGen
+# Orbit_Auto_Maker
 
 RRPathGen is a tool to generate [Road Runner](https://github.com/acmerobotics/road-runner) paths.
 ![RRPathGen](https://i.imgur.com/TN0eaFO.png)
