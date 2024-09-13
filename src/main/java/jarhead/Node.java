@@ -18,7 +18,7 @@ public class Node {
     public State state;
     public boolean reversed = false;
 
-    private Type type = Type.lineToLinearHeading;
+    private Type type = Type.splineTo;
 
     public enum Type {
         splineTo,

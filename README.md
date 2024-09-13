@@ -1,8 +1,7 @@
-# Orbit_Auto_Maker
+# RRPathGen
 
-Orbit_Auto_Maker
-(based on RRPathGen) is a tool to generate [Road Runner](https://github.com/acmerobotics/road-runner) paths.
-![RRPathGen](https://i.imgur.com/TN0eaFO.png)
+RRPathGen is a tool to generate [Road Runner](https://github.com/acmerobotics/road-runner) v0.5 paths.
+![RRPathGen](https://github.com/user-attachments/assets/13bc744e-f0ce-4779-aa87-9471e72bad61)
 
 ## Installation (Jar)
 
@@ -39,7 +38,7 @@ If you accidentally do something wrong with the config, just delete it at `%appd
 
 ## Acknowledgements
 The inspiration from this project came from Technic Bots' [Blitz](https://technicbots.com/Blitz) app.<br />
-The field images were aquired from [MeepMeep](https://github.com/NoahBres/MeepMeep).<br />
+The field images were aquired from [Team Juice 16236](https://www.reddit.com/r/FTC/comments/1fbhxka/into_the_deep_meepmeep_custom_field_images/).<br />
 And a big thank you to [Ryan Brott](https://github.com/rbrott) for helping me with the spline implementation.
 
 ## Contributing
